@@ -1,9 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Volume of Right Triangular Pyramid Calculator" />
+    <meta name="keywords" content="pyramid, volume, triangle, base, height" />
+    <meta name="author" content="Angelo Garcia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Right Triangular Pyramid Volume Calculator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script defer src="css/style.css"></script>
+
+    <!-- Link to the script file -->
+    <script src="js/script.js"></script>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Right Triangular Pyramid Volume Calculator</span>
+        </div>
+      </header>
+
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img
+                src="https://mathmonks.com/wp-content/uploads/2022/03/Volume-of-a-Triangular-Pyramid.jpg"
+                width="75%" height="auto"
+              />
+            </th>
+          </tr>
+        </table>
+
+        <!-- Base of the Triangle Input -->
+        <form action="#">
+          <p>Enter the base of the triangular base (in units)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="base-input"
+              min="0"
+            />
+            <label class="mdl-textfield__label" for="base-input">Base of Triangle</label>
+            <span class="mdl-textfield__error">Please enter a valid number</span>
+          </div>
+
+          <!-- Height of the Triangle Input -->
+          <p>Enter the height of the triangular base (in units)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="triangle-height-input"
+              min="0"
+            />
+            <label class="mdl-textfield__label" for="triangle-height-input">Height of Triangle</label>
+            <span class="mdl-textfield__error">Please enter a valid number</span>
+          </div>
+
+          <!-- Height of the Pyramid Input -->
+          <p>Enter the height of the pyramid (in units)</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              id="pyramid-height-input"
+              min="0"
+            />
+            <label class="mdl-textfield__label" for="pyramid-height-input">Height of Pyramid</label>
+            <span class="mdl-textfield__error">Please enter a valid number</span>
+          </div>
+        </form>
+
+        <!-- Calculate button -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculateVolume()"
+        >
+          Calculate Volume
+        </button>
+
+        <br />
+
+        <!-- Result display -->
+        <div id="result">
+          <!-- Result will be displayed here -->
+        </div>
+      </main>
+    </div>
   </body>
 </html>
